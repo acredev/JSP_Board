@@ -6,11 +6,11 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Insert title here</title>
-	</head>
-	<body>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
 	<form action="post_read.jsp" method="post">
 		<%
 		Class.forName("com.mysql.jdbc.Driver");
@@ -37,16 +37,16 @@
 			while(result.next())
 			{
 			%>
-				<tr>
-					<td><%=result.getInt("num") %></td>
-					<td><%=result.getString("writer") %></td>
-					<td><a href="post_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("title") %></a></td>
-					<td><%=result.getTimestamp("reg_date") %></td>
-				</tr>
+			<tr>
+				<td><%=result.getInt("num") %></td>
+				<td><%=result.getString("writer") %></td>
+				<td><a href="post_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("title") %></a></td>
+				<td><%=result.getTimestamp("reg_date") %></td>
+			</tr>
 			<%
 			}
 			%>
 		</table>
 	</form>
-	</body>
+</body>
 </html>

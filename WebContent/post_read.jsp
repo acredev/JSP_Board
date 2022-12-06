@@ -7,26 +7,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
 </head>
 <body>
 	<%
-		request.setCharacterEncoding("UTF-8");
+	request.setCharacterEncoding("UTF-8");
 	
-		String num=request.getParameter("num");
-		
-		Class.forName("com.mysql.jdbc.Driver");
-		String db_address = "jdbc:mysql://localhost:3306/basicjsp";
-		String db_username = "jspid";
-		String db_pwd = "rudals";
+	String num=request.getParameter("num");
 	
-		Connection connection = DriverManager.getConnection(db_address, db_username, db_pwd);
+	Class.forName("com.mysql.jdbc.Driver");
+	String db_address = "jdbc:mysql://localhost:3306/basicjsp";
+	String db_username = "jspid";
+	String db_pwd = "rudals";
 	
-		String insertQuery = "SELECT * FROM basicjsp.board_19831049 WHERE num=" + num;
-		PreparedStatement psmt = connection.prepareStatement(insertQuery);
-		ResultSet result = psmt.executeQuery();
+	Connection connection = DriverManager.getConnection(db_address, db_username, db_pwd);
+	
+	String insertQuery = "SELECT * FROM basicjsp.board_19831049 WHERE num=" + num;
+	PreparedStatement psmt = connection.prepareStatement(insertQuery);
+	ResultSet result = psmt.executeQuery();
 	%>
+	
 	<table border="1">
 		<%
 		while(result.next())

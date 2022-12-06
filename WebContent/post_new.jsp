@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
 	<h1>글 작성하기</h1>

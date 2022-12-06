@@ -1,5 +1,4 @@
 <%@page import="java.sql.Timestamp"%>
-<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.DriverManager"%>
@@ -14,6 +13,7 @@
 </head>
 <body>
 <form action="post_list.jsp" method="post">
+	<input type="button" value="글 목록 보기" onclick="location.href='post_list.jsp'">
 	<%
 	int readcnt = 0;
 	
@@ -52,6 +52,8 @@
 	psmt.setString(5, body);
 	psmt.setTimestamp(6, today_date);
 	psmt.executeUpdate();
+	
+	response.sendRedirect("post_list.jsp");
 	%>
 	</form>
 </body>

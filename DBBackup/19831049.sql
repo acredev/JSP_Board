@@ -26,7 +26,6 @@ DROP TABLE IF EXISTS `board_19831049`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `board_19831049` (
   `num` int NOT NULL AUTO_INCREMENT,
-  `password` varchar(20) NOT NULL,
   `title` varchar(50) NOT NULL,
   `writer` varchar(50) NOT NULL,
   `content` text NOT NULL,
@@ -41,31 +40,8 @@ CREATE TABLE `board_19831049` (
 
 LOCK TABLES `board_19831049` WRITE;
 /*!40000 ALTER TABLE `board_19831049` DISABLE KEYS */;
-INSERT INTO `board_19831049` VALUES (1,'password(test)','title(test)','writer(test)','body(test)','2022-12-07 23:32:11');
+INSERT INTO `board_19831049` VALUES (1,'test','test','test','2022-12-08 03:01:15'),(2,'title_test','writer_test','body_test','2022-12-08 03:18:03');
 /*!40000 ALTER TABLE `board_19831049` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `user_19831049`
---
-
-DROP TABLE IF EXISTS `user_19831049`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `user_19831049` (
-  `ID` varchar(20) NOT NULL,
-  `PW` varchar(45) NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user_19831049`
---
-
-LOCK TABLES `user_19831049` WRITE;
-/*!40000 ALTER TABLE `user_19831049` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user_19831049` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -85,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-07 23:34:43
+-- Dump completed on 2022-12-08  3:18:35

@@ -17,7 +17,8 @@
 ![image](https://user-images.githubusercontent.com/3482382/206260352-b18bea71-8852-488f-ac3b-5d06b2df0b02.png)<br>
   * `Apache Tomcat` 서버를 `localhost`에서 구동 후, `main.html` 파일을 `open` 합니다.
     * 서버 미구동시, `.jsp`파일을 작동시킬 수 없습니다.
-    * `button`에 마우스 `hover`시 색이 진해집니다.<br><br><br>
+    * `button`에 마우스 `hover`시 색이 진해집니다.<br><br>
+  * 정상적인 사용을 위해서, `\DBBackup` 경로에 위치한 `19831049.sql` MySQL SCHEMAS `dump` 파일을 이용해 DB를 생성해야 합니다.<br><br><br>
 
 
 ![image](https://user-images.githubusercontent.com/3482382/206260431-3b5be235-98d6-4dbc-bacc-5f8e189a1450.png)<br>

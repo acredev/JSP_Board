@@ -2,10 +2,11 @@
 >경민대학교 융합소프트웨어과 2학년 A반 2학기<br>JSP기초 14주차 과제
 
 ## ⚙️ 개발환경
-<a href="https://github.com/acredev/Library_Management_System"><img src="https://img.shields.io/badge/Eclipse for WebDev-2C2255?style=for-the-badge&logo=EclipseIDE&logoColor=white"/></a>
-<a href="https://github.com/acredev/Library_Management_System"><img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white"/></a><br>
+<a href="https://github.com/acredev/JSP_SimpleBoard"><img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=EclipseIDE&logoColor=white"/></a>
+<a href="https://github.com/acredev/JSP_SimpleBoard"><img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white"/></a>
+<a href="https://github.com/acredev/JSP_SimpleBoard"><img src="https://img.shields.io/badge/Apache Tomcat-F8DC75?style=for-the-badge&logo=ApacheTomcat&logoColor=black"/></a><br>
 
-<a href="https://github.com/acredev/Library_Management_System"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/></a>
+<a href="https://github.com/acredev/JSP_SimpleBoard"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/></a>
 <a href="https://github.com/acredev"><img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white"/></a>
 <a href="https://github.com/acredev"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"/></a>
 
@@ -14,7 +15,8 @@
 
 ## 🌐 웹 페이지 구성
 ![image](https://user-images.githubusercontent.com/3482382/206260352-b18bea71-8852-488f-ac3b-5d06b2df0b02.png)<br>
-  * `Tomcat` 서버를 `localhost`에서 구동 후, `main.html` 파일을 `open` 합니다.
+  * `Apache Tomcat` 서버를 `localhost`에서 구동 후, `main.html` 파일을 `open` 합니다.
+    * 서버 미구동시, `.jsp`파일을 작동시킬 수 없습니다.
     * `button`에 마우스 `hover`시 색이 진해집니다.<br><br><br>
 
 

@@ -16,10 +16,6 @@
 				<td><input type="text" name="writer" style="width:100%"></td>
 			</tr>
 			<tr>
-				<td>글 비밀번호</td>
-				<td><input type="password" name="pwd" style="width:100%"></td>
-			</tr>
-			<tr>
 				<td>제목</td>
 				<td><input type="text" name="title"></td>
 			</tr>

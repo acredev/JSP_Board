@@ -22,7 +22,6 @@
 		request.setCharacterEncoding("UTF-8");
 	
 		String writer=request.getParameter("writer");
-		String pwd = request.getParameter("pwd");
 		String title = request.getParameter("title");
 		String body = request.getParameter("body");
 	
@@ -43,14 +42,13 @@
 			num = result.getInt("MAX(num)")+1;
 		}
 	
-		insertQuery = "INSERT INTO basicjsp.board_19831049(num, password, title, writer, content, reg_date) VALUES (?,?,?,?,?,?)";
+		insertQuery = "INSERT INTO basicjsp.board_19831049(num, title, writer, content, reg_date) VALUES (?,?,?,?,?)";
 		psmt = connection.prepareStatement(insertQuery);
 		psmt.setInt(1, num);
-		psmt.setString(2,pwd);
-		psmt.setString(3,title);
-		psmt.setString(4, writer);
-		psmt.setString(5, body);
-		psmt.setTimestamp(6, today_date);
+		psmt.setString(2,title);
+		psmt.setString(3, writer);
+		psmt.setString(4, body);
+		psmt.setTimestamp(5, today_date);
 		psmt.executeUpdate();
 	
 		response.sendRedirect("post_list.jsp");

@@ -9,18 +9,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
-	<script language="javascript">
-		function popup_modifypwd() {
-			window.open("post_modify_checkpwd.jsp", "게시글 수정 - 비밀번호 확인", "width=800, height=400, left=200, top=100");
-		}
-		function popup_deletepwd() {
-			window.open("post_delete_checkpwd.jsp", "게시글 삭제 - 비밀번호 확인", "width=800, height=400, left=200, top=100");
-		}
-	</script>
 	<link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 <body>
-	<form action="post_read.jsp" method="post">
+	<form action="post_read.jsp" method="get">
 		<h1>글 목록</h1>
 		<%
 		Class.forName("com.mysql.jdbc.Driver");
@@ -38,8 +30,7 @@
 		<table border="1">
 			<tr>
 				<td colspan = "5">
-					<button type="button" value="새 글 작성하기" onclick="location.href='post_new.jsp'">새 글 작성하기</button>
-					<p>제목을 클릭하면 글 상세보기로 이동합니다.</p>
+					<h3>제목을 클릭하면 글 상세보기로 이동합니다.</h3>
 				</td>
 			</tr>
 			<tr>
@@ -59,13 +50,18 @@
 				<td><a href="post_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("title") %></a></td>
 				<td><%=result.getTimestamp("reg_date") %></td>
 				<td>
-					<button type="button" value="수정" onClick="popup_modifypwd();">수정</button>
-					<button type="button" value="삭제" onClick="popup_deletepwd();">삭제</button>
+					<button type="button" value="수정" onClick="location.href='post_modify.jsp?num=<%=result.getString("num") %>'">수정</button>
+					<button type="button" value="삭제" onClick="location.href='post_delete.jsp?num=<%=result.getString("num") %>'">삭제</button>
 				</td>
 			</tr>
 			<%
 			}
 			%>
+			<tr>
+				<td colspan = "5">
+					<button type="button" value="새 글 작성하기" onclick="location.href='post_new.jsp'">새 글 작성하기</button>
+				</td>
+			</tr>
 		</table>
 	</form>
 </body>

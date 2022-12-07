@@ -9,8 +9,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
+	<link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 <body>
+	<h1>글 읽기</h1>
 	<%
 	request.setCharacterEncoding("UTF-8");
 	

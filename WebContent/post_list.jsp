@@ -9,8 +9,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
+	<link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 <body>
+	<h1>글 목록</h1>
 	<form action="post_read.jsp" method="post">
 		<%
 		Class.forName("com.mysql.jdbc.Driver");
@@ -32,7 +34,6 @@
 				<td>제목</td>
 				<td>작성날짜</td>
 			</tr>
-			
 			<%
 			while(result.next())
 			{
@@ -46,6 +47,9 @@
 			<%
 			}
 			%>
+			<tr>
+				<button type=button onclick="location.href='post_new.jsp'">새 글 작성하기</button>
+			</tr>
 		</table>
 	</form>
 </body>

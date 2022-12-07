@@ -8,11 +8,11 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>게시글 수정_19831049 이민혁</title>
 	<link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 <body>
-	<h1>글 수정</h1>
+	<h1>게시글 수정</h1>
 	<%
 	request.setCharacterEncoding("UTF-8");
 	

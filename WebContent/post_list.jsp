@@ -8,12 +8,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>게시글 목록_19831049 이민혁</title>
 	<link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 <body>
 	<form action="post_read.jsp" method="get">
-		<h1>글 목록</h1>
+		<h1>게시글 목록</h1>
 		<%
 		Class.forName("com.mysql.jdbc.Driver");
 		String db_address = "jdbc:mysql://localhost:3306/basicjsp";
@@ -30,7 +30,7 @@
 		<table border="1">
 			<tr>
 				<td colspan = "5">
-					<h3>제목을 클릭하면 글 상세보기로 이동합니다.</h3>
+					<h3>제목을 클릭하면 게시글을 상세 열람할 수 있습니다.</h3>
 				</td>
 			</tr>
 			<tr>
@@ -59,7 +59,7 @@
 			%>
 			<tr>
 				<td colspan = "5">
-					<button type="button" value="새 글 작성하기" onclick="location.href='post_new.jsp'">새 글 작성하기</button>
+					<button type="button" onclick="location.href='post_new.jsp'">신규 게시글 작성</button>
 				</td>
 			</tr>
 		</table>

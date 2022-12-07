@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>게시글 삭제_19831049 이민혁</title>
 </head>
 <body>
 	<%

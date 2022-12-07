@@ -4,11 +4,11 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>신규 게시글 작성_19831049 이민혁</title>
 	<link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 <body>
-	<h1>글 작성하기</h1>
+	<h1>신규 게시글 작성</h1>
 	<form action="post_new_send.jsp" method="post">
 		<table>
 			<tr>
@@ -25,9 +25,9 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<button type="submit" value="글 작성">글 작성</button>
-					<button type="button" value="글 목록으로 돌아가기" onclick="location.href='post_list.jsp'">글 목록으로 돌아가기</button>
-					<button type="reset" value="입력내용 초기화">입력내용 초기화</button>
+					<button type="submit">저장</button>
+					<button type="button" onclick="location.href='post_list.jsp'">목록으로</button>
+					<button type="reset">입력내용 초기화</button>
 				</td>
 			</tr>
 		</table>

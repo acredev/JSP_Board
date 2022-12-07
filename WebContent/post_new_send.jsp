@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>신규 게시글 저장 (JSP전송)_19831049 이민혁</title>
 </head>
 <body>
 	<form action="post_list.jsp" method="post">

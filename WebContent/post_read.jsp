@@ -55,8 +55,11 @@
 				<td>내용</td>
 				<td><%=result.getString("content") %></td>
 			</tr>
-			<tr colspan="2">
-				<td><button type=button onclick="location.href='post_list.jsp'">글 목록으로 돌아가기</button></td>
+			<tr>
+				<td colspan="2">
+					<button type=button onclick="location.href='post_new.jsp'">새 글 쓰기</button>
+					<button type=button onclick="location.href='post_list.jsp'">글 목록으로 돌아가기</button>
+				</td>
 			</tr>
 		<%
 		}

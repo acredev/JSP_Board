@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 <body>
-	<h1>글 목록</h1>
+		<h1>글 목록</h1>
 	<form action="post_read.jsp" method="post">
 		<%
 		Class.forName("com.mysql.jdbc.Driver");
@@ -28,6 +28,12 @@
 		%>
 		
 		<table border="1">
+			<tr>
+				<td colspan = "4">
+					<button type="button" value="새 글 작성하기" onclick="location.href='post_new.jsp'">새 글 작성하기</button>
+					<p>제목을 클릭하면 글 상세보기로 이동합니다.</p>
+				</td>
+			</tr>
 			<tr>
 				<td>글번호</td>
 				<td>작성자</td>
@@ -47,9 +53,6 @@
 			<%
 			}
 			%>
-			<tr>
-				<button type=button onclick="location.href='post_new.jsp'">새 글 작성하기</button>
-			</tr>
 		</table>
 	</form>
 </body>

@@ -14,27 +14,29 @@
 <body>
 	<h1>게시글 상세열람</h1>
 	<%
-	request.setCharacterEncoding("UTF-8");
+	try
+	{
+		request.setCharacterEncoding("UTF-8");
 	
-	String num=request.getParameter("num");
+		String num=request.getParameter("num");
 	
-	Class.forName("com.mysql.jdbc.Driver");
-	String db_address = "jdbc:mysql://localhost:3306/basicjsp";
-	String db_username = "jspid";
-	String db_pwd = "rudals";
+		Class.forName("com.mysql.jdbc.Driver");
+		String db_address = "jdbc:mysql://localhost:3306/basicjsp";
+		String db_username = "jspid";
+		String db_pwd = "rudals";
 	
-	Connection connection = DriverManager.getConnection(db_address, db_username, db_pwd);
+		Connection connection = DriverManager.getConnection(db_address, db_username, db_pwd);
 	
-	String insertQuery = "SELECT * FROM basicjsp.board_19831049 WHERE num=" + num;
-	PreparedStatement psmt = connection.prepareStatement(insertQuery);
-	ResultSet result = psmt.executeQuery();
-	%>
+		String insertQuery = "SELECT * FROM basicjsp.board_19831049 WHERE num=" + num;
+		PreparedStatement psmt = connection.prepareStatement(insertQuery);
+		ResultSet result = psmt.executeQuery();
+		%>
 	
-	<table border="1">
-		<%
+		<table border="1">
+			<%
 		while(result.next())
 		{
-		%>
+			%>
 			<tr>
 				<td>게시글 번호</td>
 				<td><%=result.getInt("num") %></td>
@@ -61,9 +63,14 @@
 					<button type=button onclick="location.href='post_list.jsp'">돌아가기</button>
 				</td>
 			</tr>
-		<%
+			<%
 		}
-		%>
+	}
+	catch (Exception ex)
+	{
+		System.out.println("오류가 발생했습니다. 오류 메시지 : " + ex.getMessage());
+	}
+	%>
 	</table>
 </body>
 </html>

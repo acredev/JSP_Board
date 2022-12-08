@@ -12,6 +12,8 @@
 </head>
 <body>
 	<%
+	try
+	{
 		request.setCharacterEncoding("UTF-8");
 		int num = Integer.parseInt(request.getParameter("num"));
 		String writer = request.getParameter("writer");
@@ -30,7 +32,8 @@
 		psmt.setInt(1,num);
 		ResultSet result = psmt.executeQuery();
 		
-		if (result.next()) {
+		if (result.next())
+		{
 			insertQuery = "UPDATE basicjsp.board_19831049 set title=?, writer=?, content=? WHERE num=?";
 			psmt = connection.prepareStatement(insertQuery);
 			psmt.setString(1, title);
@@ -41,6 +44,11 @@
 			
 			response.sendRedirect("post_list.jsp");
 		}
+	}
+	catch (Exception ex)
+	{
+		System.out.println("오류가 발생했습니다. 오류 메시지 : " + ex.getMessage());
+	}
 	%>
 </body>
 </html>
